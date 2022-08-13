@@ -1,10 +1,8 @@
-import Fighter, { SimpleFighter } from '../Fighter';
+import Fighter from '../Fighter';
 import Battle from './Battle';
 
-type Player = Fighter | SimpleFighter;
-
 class PVP extends Battle {
-  constructor(player: Fighter, protected player2: Player) {
+  constructor(player: Fighter, protected player2: Fighter) {
     super(player);
     this.player2 = player2;
     
